@@ -57,3 +57,5 @@
 ## Imagemagick/mogrify
 - convert heic image to jpg: `mogrify -format jpg IMG_1103.HEIC`
 
+## Config versioning 
+- `config [add/commit/any git command]`: used for version control of the dotfiles repository.
