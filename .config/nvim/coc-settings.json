@@ -1,0 +1,16 @@
+{
+  "suggest.noselect": false,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "html",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "scss",
+    "css",
+    "javascriptreact",
+    "typescript.tsx",
+    "graphql"
+  ],
+  "git.addGBlameToVirtualText": true
+}
