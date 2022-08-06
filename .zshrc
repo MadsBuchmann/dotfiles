@@ -1,16 +1,10 @@
-export PS1="%~ 😎👉 "
 alias ll="exa --tree --level=1"
 alias gtp="cd ~/Projects/"
-alias gtrb="cd ~/Projects/relationsbank && nvm use"
-alias gtds="cd ~/Projects/designsystem && nvm use"
-alias ngtds="gtds && nvim ~/Projects/designsystem"
-alias gtn="cd ~/notes/"
-alias ngtdsnotes="gtdsnotes && nvim ."
+
 alias gsundo="git reset HEAD~1"
 alias ghundo="git reset --hard HEAD~1"
-#alias git="git-pass | xargs git"
 alias gs="git status"
-alias zh="open -a Firefox \"https://github.com/kirbydesign/designsystem/pulls#workspaces/\""
+
 alias sovs="echo 'sourcing ~/.zshrc' && source ~/.zshrc"
 alias goodmorning="open /Applications/Things3.app && open /Applications/Slack.app && zh && open ~/Desktop/Brain\ FM\ Player.app && dbe"
 alias vimconfig="nvim ~/.config/nvim/init.vim"
