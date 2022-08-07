@@ -41,6 +41,8 @@ let g:coc_global_extensions = [
 
 " --- NVIM settings
 
+set noswapfile " disable swap files
+
 " -- Search Settings 
 set ignorecase "Make search case insensitive by default. A search can be made case sensitive by appending \C to it
 set smartcase " Automatically switch to a case-sensitive search if you use any capital letters
