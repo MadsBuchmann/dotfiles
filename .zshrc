@@ -36,3 +36,5 @@ dbe() {
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # Enable fzf
+
+source /home/mads/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#in-your-zshrc
