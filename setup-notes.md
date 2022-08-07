@@ -4,6 +4,7 @@ Desktop environment: xfce with i3 as window manager.
 
 ## Configurations
 - xrandr: used for configuring screen output. For changes to persist they should be made in `$HOME/.xprofile`. I used this for setting the refresh rate to 144hz.
+- .config/alacritty/...: file created for configuration of alacritty.
 
 ## Software 
 - yay: AUR helper that helps managing dependencies etc. from programs installed from the user repository. I used this for installing spotify: `yay -S spotify` [0]. 
