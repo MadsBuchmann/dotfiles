@@ -1,3 +1,17 @@
+# Font configuration
+font: 
+  size: 13
+  normal:
+    family: Fira Code
+    style: Regular
+  bold:
+    family: Fira Code
+    style: Bold
+  italic:
+    family: Fira Code
+    style: Italic
+      
+
 # Colors (Gruvbox dark)
 colors:
   primary:
