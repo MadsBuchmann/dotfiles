@@ -9,6 +9,8 @@ alias sovs="echo 'sourcing ~/.zshrc' && source ~/.zshrc"
 alias goodmorning="open /Applications/Things3.app && open /Applications/Slack.app && zh && open ~/Desktop/Brain\ FM\ Player.app && dbe"
 alias vimconfig="nvim ~/.config/nvim/init.vim"
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias i3-restart="i3-msg reload && i3-msg restart" # Useful when making changes to i3 config
+
 # Git branch search 
 gbs() {
   git branch -a | grep "$1" | fzf --layout reverse-list --header="Select branch" | xargs git checkout
