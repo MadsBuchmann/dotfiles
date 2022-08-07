@@ -16,9 +16,9 @@ if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
 fi
 
 # Use manjaro zsh prompt
-#if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
-#  source /usr/share/zsh/manjaro-zsh-prompt
-#fi
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi
 
 alias ll="exa --tree --level=1"
 alias gtp="cd ~/Projects/"
