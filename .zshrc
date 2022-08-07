@@ -55,7 +55,11 @@ dbe() {
   fi
 }
 
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
+# This works on my mac... 
+# [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
+# This works on manjaro 
+source /usr/share/nvm/init-nvm.sh
+
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # Enable fzf
 
