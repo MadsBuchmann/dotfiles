@@ -10,7 +10,9 @@
     "css",
     "javascriptreact",
     "typescript.tsx",
-    "graphql"
+    "graphql",
+    "markdown",
+    "liquid"
   ],
   "git.addGBlameToVirtualText": true
 }
