@@ -33,6 +33,8 @@ alias vimconfig="nvim ~/.config/nvim/init.vim"
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias i3-restart="i3-msg reload && i3-msg restart" # Useful when making changes to i3 config
 
+alias get-pending-delete-domains="echo https://www.namejet.com/download/$(date +%-m-%d-%Y).txt | xargs curl | nvim"
+
 # Git branch search 
 gbs() {
   git branch -a | grep "$1" | fzf --layout reverse-list --header="Select branch" | xargs git checkout
