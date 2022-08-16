@@ -22,6 +22,7 @@ fi
 
 alias ll="exa --tree --level=1"
 alias gtp="cd ~/Projects/"
+alias gtpw="cd ~/Projects/personal-website"
 
 alias gsundo="git reset HEAD~1"
 alias ghundo="git reset --hard HEAD~1"
