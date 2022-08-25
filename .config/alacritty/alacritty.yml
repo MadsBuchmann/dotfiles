@@ -1,6 +1,6 @@
 # Font configuration
 font: 
-  size: 13
+  size: 18
   normal:
     family: Fira Code
     style: Regular
