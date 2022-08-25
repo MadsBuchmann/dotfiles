@@ -41,6 +41,8 @@ let g:coc_global_extensions = [
 
 " --- NVIM settings
 
+set noswapfile " disable swap files
+
 " -- Search Settings 
 set ignorecase "Make search case insensitive by default. A search can be made case sensitive by appending \C to it
 set smartcase " Automatically switch to a case-sensitive search if you use any capital letters
@@ -144,7 +146,7 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+"inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Or use `complete_info` if your vim support it, like:
 " inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 
