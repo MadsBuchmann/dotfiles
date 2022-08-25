@@ -1,3 +1,8 @@
+
+# Enable powerline - mac specific
+USE_POWERLINE="true"
+source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
+
 export PS1="%~ 😎👉 "
 alias ll="exa --tree --level=1"
 alias gtp="cd ~/Projects/"
