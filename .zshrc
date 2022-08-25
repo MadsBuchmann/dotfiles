@@ -45,3 +45,4 @@ dbe() {
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # Enable fzf
+source ~/.p10k.zsh
