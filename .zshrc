@@ -10,6 +10,11 @@ alias ll="exa --tree --level=1"
 alias gtp="cd ~/Projects/"
 
 # shortcuts for comp sci semester 1 
+## Computer Science  
+mlcoursepage="https://brightspace.au.dk/d2l/le/lessons/70849/topics/1073537"
+dlcoursepage="https://brightspace.au.dk/d2l/le/lessons/71451/units/1050059"
+dvcoursepage="https://brightspace.au.dk/d2l/le/lessons/70168/units/1028790"
+alias planning-time="open -a /Applications/Firefox.app $mlcoursepage && open -a /Applications/Firefox.app $dlcoursepage && open -a /Applications/Firefox.app $dvcoursepage && open /Applications/Things3.app"
 ## ML
 alias gtml="cd ~/Projects/machine-learning" 
 alias gtmle="gtml && cd exercise-sessions"
