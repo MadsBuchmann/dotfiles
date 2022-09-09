@@ -19,7 +19,7 @@ alias planning-time="open -a /Applications/Firefox.app $mlcoursepage && open -a 
 alias gtml="cd ~/Projects/machine-learning" 
 alias gtmle="gtml && cd exercise-sessions"
 ## DV 
-alias gtdv="cd ~/Projects/data-visualization"
+alias gtdvc="cd ~/Projects/data-visualization-course-project"
 ## DL
 alias gtdl="cd ~/Projects/deep-learning-for-visual-recognition"
 # git aliases 
