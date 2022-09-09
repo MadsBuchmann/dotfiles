@@ -12,5 +12,6 @@
     "typescript.tsx",
     "graphql"
   ],
-  "git.addGBlameToVirtualText": true
+  "git.addGBlameToVirtualText": true,
+  "svelte.enable-ts-plugin": true
 }

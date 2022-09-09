@@ -28,6 +28,10 @@ Plug 'mileszs/ack.vim'
 Plug 'Yggdroot/indentLine'
 " Surround.vim - used for changing surrounding signs
 Plug 'tpope/vim-surround'
+" vim-svelte & dependencies - syntax highlighting for svelte
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 call plug#end()
 
 " --- CoC extensions 
@@ -36,7 +40,8 @@ let g:coc_global_extensions = [
       \ 'coc-tsserver',
       \ 'coc-prettier',
       \ 'coc-json',
-      \ 'coc-pairs']
+      \ 'coc-pairs', 
+      \'coc-svelte']
 
 
 " --- NVIM settings
