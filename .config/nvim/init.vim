@@ -32,6 +32,8 @@ Plug 'tpope/vim-surround'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
+" Language server for python 
+Plug 'pappasam/coc-jedi'
 call plug#end()
 
 " --- CoC extensions 
@@ -41,12 +43,17 @@ let g:coc_global_extensions = [
       \ 'coc-prettier',
       \ 'coc-json',
       \ 'coc-pairs', 
-      \'coc-svelte']
+      \'coc-svelte', 
+      \'coc-jedi']
 
 
 " --- NVIM settings
 
 set noswapfile " disable swap files
+
+autocmd TermOpen * startinsert " Open terminal in insert mode 
+autocmd TermOpen * set nu! " TODO: this does not always work... why?
+
 
 " -- Search Settings 
 set ignorecase "Make search case insensitive by default. A search can be made case sensitive by appending \C to it
@@ -205,4 +212,5 @@ command -nargs=* -complete=file -bar Ocomp :Oh|:Vc|:Vt
 
 " -- Shortcut for Vertical Resize 
 command -nargs=1 -complete=file VR :vertical resize <args>
+
 
