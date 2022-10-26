@@ -1,6 +1,6 @@
 " Settings for using the :term command 
 autocmd TermOpen * startinsert " Open terminal in insert mode 
-autocmd TermOpen * set nu! " TODO: this does not always work... why?
+autocmd TermOpen * setlocal nonumber 
 
 " -- Terminal settings 
 " - Make it possible to exit terminal opened with :term using esc
