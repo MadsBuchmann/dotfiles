@@ -37,4 +37,9 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 " Rename variable file wide 
 nmap <leader>rn <Plug>(coc-rename)
+" Shortcuts for tabnew and split 
+nmap <leader>tn :tabnew<CR>
+nmap <leader>vs :vsplit<CR>
+nmap <leader>vst :vsplit \|:term<CR>
+nmap <leader>tnt :tabnew \|:term<CR>
 
