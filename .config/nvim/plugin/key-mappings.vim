@@ -40,6 +40,13 @@ nmap <leader>rn <Plug>(coc-rename)
 " Shortcuts for tabnew and split 
 nmap <leader>tn :tabnew<CR>
 nmap <leader>vs :vsplit<CR>
-nmap <leader>vst :vsplit \|:term<CR>
-nmap <leader>tnt :tabnew \|:term<CR>
+
+" Open new vsplit/tab and fuzzy find
+nmap <leader>ptn :tabnew tabnew \|:FZF<CR>
+nmap <leader>pvs :vsplit \|:FZF<CR>
+
+
+" Open terminal in new vsplit/tab
+nmap <leader>tvs :vsplit \|:term<CR>
+nmap <leader>ttn :tabnew \|:term<CR>
 
