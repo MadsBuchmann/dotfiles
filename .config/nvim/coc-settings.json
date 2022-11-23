@@ -1,6 +1,7 @@
 {
   "suggest.noselect": false,
   "coc.preferences.formatOnSaveFiletypes": [
+    "svelte",
     "javascript",
     "html",
     "typescript",
@@ -10,9 +11,8 @@
     "css",
     "javascriptreact",
     "typescript.tsx",
-    "graphql",
-    "markdown",
-    "liquid"
+    "graphql"
   ],
-  "git.addGBlameToVirtualText": true
+  "git.addGBlameToVirtualText": true,
+  "svelte.enable-ts-plugin": true
 }
