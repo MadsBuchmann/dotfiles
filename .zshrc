@@ -17,24 +17,9 @@ alias jn="jupyter-notebook ."
 ## Destination shortcuts
 alias gtp="cd ~/Projects/"
 
-# shortcuts for comp sci semester 1 
+# shortcuts for comp sci semester 2 
 ## Computer Science  
-mlcoursepage="https://brightspace.au.dk/d2l/le/lessons/70849/topics/1073537"
-dlcoursepage="https://brightspace.au.dk/d2l/le/lessons/71451/units/1050059"
-dvcoursepage="https://brightspace.au.dk/d2l/le/lessons/70168/units/1028790"
-alias planning-time="open -a /Applications/Firefox.app $mlcoursepage && open -a /Applications/Firefox.app $dlcoursepage && open -a /Applications/Firefox.app $dvcoursepage && open /Applications/Things3.app"
-## ML
-alias gtml="cd ~/Projects/machine-learning" 
-alias gtmlp="cd ~/Projects/machine-learning/ml-group-15" 
-alias gtmle="gtml && cd exercise-sessions"
-alias gtmla="cd ~/Documents/*'Machine Learning'/"
-alias gtmlae="cd '/Users/madsfrederiksen/Documents/🤖 Machine Learning/🧰 Resources/exercise-sets'"
-## DV 
-alias gtdvp="cd ~/Projects/data-visualization-course-project"
-## DL
-alias gtdl="cd ~/Projects/deep-learning-for-visual-recognition"
-alias gtdlp="cd ~/Projects/deep-learning-for-visual-recognition/course-project"
-alias gtdlae="cd '/Users/madsfrederiksen/Documents/👁 Deep Learning for Visual Recognition/🧰 Resources/Deep-Learing-for-Visual-Recognition-2022'"
+alias gtarp="cd ~/Projects/augmented-reality-group"
 
 # git aliases 
 alias gsundo="git reset HEAD~1"
