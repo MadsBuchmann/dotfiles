@@ -1,21 +1,13 @@
-# TODO: This file is becoming large. 
-# I could split it into several smaller files. 
-# Perhaps find a way to conditionally toggle manjaro config stuff?
-# TODO: put destinations into variables - use them in gd commands 
-# This way they can also be used for other stuff (for example jn ml)
-
-# Enable powerline - mac specific
+# Enable powerline 
 USE_POWERLINE="true"
 source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
-
-export PS1="%~ 😎👉 "
 
 # General Aliases 
 alias ll="exa --tree --level=1"
 alias jn="jupyter-notebook ."
 
 ## Destination shortcuts
-alias gtp="cd ~/Projects/"
+alias gtd="cd ~/Developer/"
 
 # shortcuts for comp sci semester 2 
 ## Computer Science  
@@ -39,20 +31,6 @@ gbs() {
 
 # Enable autocompletion in git
 autoload -Uz compinit && compinit
-
-# Open or create new daybook entry TODO: Reconsider date structure
-dbe() {
-  DATE=$(date "+%d-%m-%Y")
-  FILE=~/notes/daybook-${DATE}.md
-  cd ~/notes/
-  if [[ -f "$FILE" ]]; then 
-    nvim ${FILE}
-  else
-    touch ${FILE} 
-    echo "# Daybook entry for ${DATE}" > ${FILE}
-    nvim ${FILE}
-  fi
-}
 
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
 
