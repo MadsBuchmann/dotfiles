@@ -25,7 +25,14 @@ alias pip3="pip-message"
 
 # Git branch search 
 gbs() {
-  git branch -a | grep "$1" | fzf --layout reverse-list --header="Select branch" | xargs git checkout
+  git branch -a | grep "$1" | fzf --layout reverse-list --header="Select branch" --preview "echo {} | sed 's/ //g' | xargs git log | bat --color=always --theme=gruvbox-dark -p" | xargs git checkout
+}
+
+fd() {
+  local dir
+  dir=$(find ${1:-.} -path '/.' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m --preview "exa --icons --tree --level=1 {}") &&
+  cd "$dir"
 }
 
 # Enable autocompletion in git
