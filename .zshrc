@@ -43,3 +43,30 @@ autoload -Uz compinit && compinit
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # Enable fzf
 source ~/.p10k.zsh
 source ~/.config/zsh-parts/comp-sci-semester-2
+
+# Add conda to path 
+# export PATH="/Users/madsfrederiksen/anaconda3/bin:$PATH"  # commented out by conda initialize
+
+# pnpm
+export PNPM_HOME="/Users/madsfrederiksen/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/madsfrederiksen/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/madsfrederiksen/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/madsfrederiksen/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/madsfrederiksen/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
