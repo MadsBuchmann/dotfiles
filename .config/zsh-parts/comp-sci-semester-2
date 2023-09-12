@@ -1,6 +1,0 @@
-## System security 
-alias airport='sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport'
-alias ssfp='cd ~/Projects/system-security/group-repo/final-project'
-alias ssfpr='nvim ~/Projects/system-security/group-repo/final-project/report/'
-## Computer Science  
-
