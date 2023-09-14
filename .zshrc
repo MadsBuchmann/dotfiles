@@ -42,7 +42,6 @@ autoload -Uz compinit && compinit
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # Enable fzf
 source ~/.p10k.zsh
-source ~/.config/zsh-parts/comp-sci-semester-2
 
 # Add conda to path 
 # export PATH="/Users/madsfrederiksen/anaconda3/bin:$PATH"  # commented out by conda initialize
