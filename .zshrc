@@ -23,6 +23,9 @@ alias pip-message="echo 'Nope. Use python3 -m pip.'"
 alias pip="pip-message"
 alias pip3="pip-message"
 
+# Sync your deep learning project to google drive 
+alias dl-sync="rclone sync --interactive ~/Developer/deep-learning-semester-project gdrive:Developer/deep-learning-semester-project"
+
 # Git branch search 
 gbs() {
   git branch -a | grep "$1" | fzf --layout reverse-list --header="Select branch" --preview "echo {} | sed 's/ //g' | xargs git log | bat --color=always --theme=gruvbox-dark -p" | xargs git checkout
