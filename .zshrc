@@ -19,12 +19,6 @@ alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # Other aliases 
 alias get-pending-delete-domains="echo https://www.namejet.com/download/$(date +%-m-%d-%Y).txt | xargs curl | nvim"
-alias pip-message="echo 'Nope. Use python3 -m pip.'"
-alias pip="pip-message"
-alias pip3="pip-message"
-
-# Sync your deep learning project to google drive 
-alias dl-sync="rclone sync --interactive ~/Developer/deep-learning-semester-project gdrive:Developer/deep-learning-semester-project"
 
 # Git branch search 
 gbs() {
