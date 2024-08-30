@@ -49,6 +49,38 @@ sars() {
   fi
 }
 
+# Wraps args of previous commands in quotes when you fucking forget it...
+fucking() {
+  # Get the previous command
+  local prev_cmd=$(fc -ln -1)
+
+  # Separate the command from its arguments
+  local cmd_name=$(echo "$prev_cmd" | awk '{print $1}')
+  local cmd_args=$(echo "$prev_cmd" | awk '{$1=""; print $0}' | sed -E 's/^[ ]+//')
+
+  # Wrap the arguments in quotes, handling flags with values
+  local quoted_args=$(echo "$cmd_args" | awk '{
+    for(i=1;i<=NF;i++) {
+      if($i ~ /^-/) {
+        # If the argument is a flag with an "=" sign
+        if($i ~ /=/) {
+          sub(/=/, "=\"", $i);
+          $i=$i"\"";
+        }
+        printf("%s ", $i);
+      } else {
+        printf("\"%s\" ", $i);
+      }
+    }
+  }')
+
+  # Combine the command name with the quoted arguments
+  local quoted_cmd="$cmd_name $quoted_args"
+
+  # Print the modified command to the current command line buffer
+  print -z "$quoted_cmd"}
+
+
 # Enable autocompletion in git
 autoload -Uz compinit && compinit
 
