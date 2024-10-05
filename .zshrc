@@ -1,10 +1,13 @@
 # Enable powerline 
 USE_POWERLINE="true"
-source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
+#source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.secrets
 
 # General Aliases 
 alias ll="exa --tree --level=1"
 alias jn="jupyter-notebook ."
+
+alias rip-song="yt-dlp --extract-audio --audio-quality 10 --audio-format wav"
 
 # git aliases 
 alias gsundo="git reset HEAD~1"
@@ -89,8 +92,12 @@ autoload -Uz compinit && compinit
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # Enable fzf
 source ~/.p10k.zsh
 
-# Add conda to path 
-# export PATH="/Users/madsfrederiksen/anaconda3/bin:$PATH"  # commented out by conda initialize
+# Disallow opening a new nvim instance inside a nvim terminal... God knows i've done that one too many times... 
+if [[ ! -z "$VIM_TERMINAL" ]]; then
+    function nvim() {
+        echo "Opening a new instance of Neovim is disabled in this environment."
+    }
+fi
 
 # pnpm
 export PNPM_HOME="/Users/madsfrederiksen/Library/pnpm"
@@ -115,8 +122,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
 eval "$(zoxide init --cmd cd zsh)"
 
 
+# Add zodixe: https://github.com/ajeetdsouza/zoxide
+eval "$(zoxide init --cmd cd zsh)"
+source ~/powerlevel10k/powerlevel10k.zsh-theme
