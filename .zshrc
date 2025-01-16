@@ -128,3 +128,7 @@ eval "$(zoxide init --cmd cd zsh)"
 # Add zodixe: https://github.com/ajeetdsouza/zoxide
 eval "$(zoxide init --cmd cd zsh)"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Run Self Control block 
+#sudo /Applications/SelfControl.app/Contents/MacOS/selfcontrol-cli start --enddate "$(date -u -v+24H +"%Y-%m-%dT%H:%M:%SZ")" --blocklist ~/block-list.selfcontrol --uid 501
