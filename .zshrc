@@ -6,6 +6,7 @@ source ~/.secrets
 # General Aliases 
 alias ll="exa --tree --level=1"
 alias jn="jupyter-notebook ."
+alias python="python3"
 
 alias rip-song="yt-dlp --extract-audio --audio-quality 10 --audio-format wav"
 
@@ -13,6 +14,9 @@ alias rip-song="yt-dlp --extract-audio --audio-quality 10 --audio-format wav"
 alias gsundo="git reset HEAD~1"
 alias ghundo="git reset --hard HEAD~1"
 alias gs="git status"
+alias gc="git checkout"
+alias gcb="git checkout -b"
+alias gp="git pull"
 
 # Config aliases 
 alias sovs="echo 'sourcing ~/.zshrc' && source ~/.zshrc"
@@ -27,6 +31,12 @@ alias get-pending-delete-domains="echo https://www.namejet.com/download/$(date +
 gbs() {
   git branch -a | grep "$1" | fzf --layout reverse-list --header="Select branch" --preview "echo {} | sed 's/ //g' | xargs git log | bat --color=always --theme=gruvbox-dark -p" | xargs git checkout
 }
+
+# Git merge search
+gms() {
+  git branch -a | grep "$1" | fzf --layout reverse-list --header="Select branch" --preview "echo {} | sed 's/ //g' | xargs git log | bat --color=always --theme=gruvbox-dark -p" | xargs git merge
+}
+
 
 fd() {
   local dir
@@ -107,21 +117,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/madsfrederiksen/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/madsfrederiksen/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/madsfrederiksen/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/madsfrederiksen/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 eval "$(zoxide init --cmd cd zsh)"
 
 
@@ -130,5 +125,4 @@ eval "$(zoxide init --cmd cd zsh)"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Run Self Control block 
-#sudo /Applications/SelfControl.app/Contents/MacOS/selfcontrol-cli start --enddate "$(date -u -v+24H +"%Y-%m-%dT%H:%M:%SZ")" --blocklist ~/block-list.selfcontrol --uid 501
+
