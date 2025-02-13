@@ -5,14 +5,13 @@
 ## Movement
 - [{: Go to start of block starting with {
 - }]: Go to end of block enidng with }
-- The above two can use any 
+- %: Go to end of currently hovered bock (gotta be on top of it)
 - ;: Repeat latest f, F, t or T
 - ,: Repeat latest f, F, t or T in opposite direction
 
 ## Replace surrounding characters 
-- cs'" changes a surrounding characters from 'word' to "word"
-- cs"<p> changes surrounding characters from "word" to <p>word</p>
-- cst' changes surrounding characters from <p>word</p> to 'word'. 
+- <leader>sr'": [R]eplaces a surrounding characters from 'word' to "word"
+- <leader>sd': [D]eletes a surrounding characters ' from 'word'
 
 ## Search & replace 
 - `:windo <command>`: execute command in all visible windows 
@@ -30,23 +29,18 @@
 - zo: open current fold
 - zR: open all folds 
 
-## Autocompletion (CoC)
-- ctrl-n: next
-- ctrl-p: previous
+## Splits 
+- ctrl-w + v: open vertical split
+- ctrl-w + s: open horizontal split
 
-- ctrl-space: trigger auto-completion. If auto-completion is triggered, it will remove it (what i usually use esc for in vscode).
-- shift-k: Show docs in preview window
+## Marks 
+Marks allow you to jump through files like "bookmarks" 
+- m[some character]: save bookmark on character, for example 'ma'.
+- '[some character]: navigate to mark on character, for example 'a 
 
 ## Other 
-- \rn: rename variable globally
 - :norm - execute normal mode sequence as a command. Useful for repeating same stuff on multiple lines
-
-## Nerdtree 
-- ctrl-n: toggle nerdtree
-- :NerdTreeFind - open current buffer in file tree
-
-## NERDCommenter 
-- \c<space>: toggle comment, must be in visual mode
+- (in normal mode) gr: find references for variable
 
 # Useful terminal commands 
 
