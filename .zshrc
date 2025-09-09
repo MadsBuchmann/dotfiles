@@ -1,7 +1,5 @@
 # Enable powerline 
 USE_POWERLINE="true"
-#source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
-source ~/.secrets
 
 # General Aliases 
 alias ll="exa --tree --level=1"
@@ -121,6 +119,7 @@ eval "$(zoxide init --cmd cd zsh)"
 
 
 # Add zodixe: https://github.com/ajeetdsouza/zoxide
+export PATH=$HOME/.local/bin:$PATH
 eval "$(zoxide init --cmd cd zsh)"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
